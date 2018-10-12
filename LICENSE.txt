@@ -1,4 +1,4 @@
-The MIT License (MIT)
+The Apache Licene 2.0
 
 Copyright (c) 2018 Gaowh
 
