@@ -1,0 +1,12 @@
+1.
+��RocketSpringCloud DubboProvider��Ŀ�ڵ�
+provider�˷����
+����ע��:@com.alibaba.dubbo.config.annotation.Service(interfaceClass = IXXXXService.class,version = "1.0.0", timeout = 60000)
+��RocketSpringCloud��Ŀ�ڵ�
+consumer�˿��Ʋ�
+����ע��:@Reference(version = "1.0.0")
+2.application.yml(����˺͵��ö˵����ò�һ��)
+3.����zookeeper
+4.����dubbo provider
+5.����dubbo consumer
+6.ʹ��serverģ����ԡ�

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.modules.gaowh.dao.GaowhDao">
+    
+	<sql id="gaowhColumns">
+					a.id AS "id",
+					a.create_by AS "createBy.id",
+					a.create_date AS "createDate",
+					a.update_by AS "updateBy.id",
+					a.update_date AS "updateDate",
+					a.remarks AS "remarks",
+					a.del_flag AS "delFlag",
+					a.module_name AS "moduleName",
+					a.module_describe AS "moduleDescribe"
+	</sql>
+
+	<sql id="gaowhColumnsList">
+					a.id AS "id",
+					a.create_by AS "createBy.id",
+					a.create_date AS "createDate",
+					a.update_by AS "updateBy.id",
+					a.update_date AS "updateDate",
+					a.remarks AS "remarks",
+					a.del_flag AS "delFlag",
+					a.module_name AS "moduleName",
+					a.module_describe AS "moduleDescribe"
+	</sql>
+
+	<sql id="gaowhJoins">
+	</sql>
+    
+	<select id="get" resultType="Gaowh">
+		SELECT 
+			<include refid="gaowhColumns"/>
+		FROM faw_gaowh a
+		<include refid="gaowhJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="Gaowh">
+		SELECT 
+			<include refid="gaowhColumnsList"/>
+		FROM faw_gaowh a
+		<include refid="gaowhJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="id != null and id != ''">
+				AND a.id = #{id}
+			</if>
+			<if test="createBy != null and createBy.id != null and createBy.id != ''">
+				AND a.create_by = #{createBy.id}
+			</if>
+			<if test="createDate != null">
+				AND a.create_date = #{createDate}
+			</if>
+			<if test="updateBy != null and updateBy.id != null and updateBy.id != ''">
+				AND a.update_by = #{updateBy.id}
+			</if>
+			<if test="updateDate != null">
+				AND a.update_date = #{updateDate}
+			</if>
+			<if test="remarks != null and remarks != ''">
+				AND a.remarks = #{remarks}
+			</if>
+			<if test="delFlag != null and delFlag != ''">
+				AND a.del_flag = #{delFlag}
+			</if>
+			<if test="moduleName != null and moduleName != ''">
+				AND a.module_name = #{moduleName}
+			</if>
+			<if test="moduleDescribe != null and moduleDescribe != ''">
+				AND a.module_describe LIKE 
+					<if test="dbName == 'oracle'">'%'||#{moduleDescribe}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{moduleDescribe}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{moduleDescribe},'%')</if>
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="Gaowh">
+		SELECT 
+			<include refid="gaowhColumnsList"/>
+		FROM faw_gaowh a
+		<include refid="gaowhJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO faw_gaowh(
+			id,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag,
+			module_name,
+			module_describe
+		) VALUES (
+			#{id},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag},
+			#{moduleName},
+			#{moduleDescribe}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE faw_gaowh SET 	
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},
+			module_name = #{moduleName},
+			module_describe = #{moduleDescribe}
+		WHERE id = #{id}
+	</update>
+	
+	
+	<!--物理删除-->
+	<update id="delete">
+		DELETE FROM faw_gaowh
+		WHERE id = #{id}
+	</update>
+	
+	<!--逻辑删除-->
+	<update id="deleteByLogic">
+		UPDATE faw_gaowh SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+	
+	<!-- 根据实体名称和字段名称和字段值获取唯一记录 -->
+	<select id="findUniqueByProperty" resultType="Gaowh" statementType="STATEMENT">
+		select * FROM faw_gaowh  where ${propertyName} = '${value}'
+	</select>
+
+	<select id="total" resultType="Gaowh">
+		SELECT
+			<choose>
+				<when test=" totalType != null and totalType != ''">
+					DATE_FORMAT(a.create_date,'${totalType}') as totalDate,
+				</when>
+				<otherwise>
+				 </otherwise>
+			</choose>
+			count(*) as totalCount
+		FROM
+			faw_gaowh a
+		<where>
+			1=1
+			and a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="id != null and id != ''">
+				AND a.id = #{id}
+			</if>
+			<if test="createBy != null and createBy.id != null and createBy.id != ''">
+				AND a.create_by = #{createBy.id}
+			</if>
+			<if test="createDate != null">
+				AND a.create_date = #{createDate}
+			</if>
+			<if test="updateBy != null and updateBy.id != null and updateBy.id != ''">
+				AND a.update_by = #{updateBy.id}
+			</if>
+			<if test="updateDate != null">
+				AND a.update_date = #{updateDate}
+			</if>
+			<if test="remarks != null and remarks != ''">
+				AND a.remarks = #{remarks}
+			</if>
+			<if test="delFlag != null and delFlag != ''">
+				AND a.del_flag = #{delFlag}
+			</if>
+			<if test="moduleName != null and moduleName != ''">
+				AND a.module_name = #{moduleName}
+			</if>
+			<if test="moduleDescribe != null and moduleDescribe != ''">
+				AND a.module_describe LIKE
+					<if test="dbName == 'oracle'">'%'||#{moduleDescribe}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{moduleDescribe}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{moduleDescribe},'%')</if>
+			</if>
+		</where>
+		<choose>
+			<when test=" groupBy != null and groupBy != '' and totalType != null and totalType != '' ">
+				GROUP BY DATE_FORMAT(a.create_date,'${totalType}'),${groupBy}
+			</when>
+			<when test=" groupBy != null and groupBy != ''">
+				GROUP BY ${groupBy}
+			</when>
+			<when test=" totalType != null and totalType != ''">
+				GROUP BY DATE_FORMAT(a.create_date,'${totalType}')
+			</when>
+			<otherwise>
+			 </otherwise>
+		</choose>
+		<choose>
+			<when test=" orderBy != null and orderBy != ''">
+				ORDER BY ${orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+</mapper>
