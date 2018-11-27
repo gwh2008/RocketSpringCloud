@@ -17,7 +17,7 @@ import java.util.Date;
  * 消息生产者.
  * @author gaowh
  * @version v.0.1
- * @date 2016年8月23日
+ * @date 2018年8月23日
  */
 
 @Service("companyProducer")

@@ -44,11 +44,6 @@
 				<i class="fa-chevron fa fa-chevron-up"></i><i class="fa-chevron fa fa-chevron-down" style="display:none"></i> 统计
 			</button>
 			<button  class="btn btn-success btn-sm " onclick="search()" title="查询"><i class="fa fa-search"></i> 查询</button>
-
-			<table:upload url="${ctx}/gaowh/gaowh/upload"  id="contentTable"></table:upload>
-			<table:download url="${ctx}/gaowh/gaowh/download" id="contentTable"></table:download>
-
-
 			<shiro:hasPermission name="gaowh:gaowh:add">
 				<table:addRow url="${ctx}/gaowh/gaowh/form" title="模块管理"></table:addRow><!-- 增加按钮 -->
 			</shiro:hasPermission>
