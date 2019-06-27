@@ -1,10 +1,10 @@
-RocketSpringCloud V2.5-火箭云快速开发框架
+RocketSpringCloud V5.3-火箭云快速开发框架
 ===============
 
   （一款免费开源的JAVA互联网云快速开发平台）
 微服务分布式代码生成的敏捷开发系统架构。项目代码简洁,注释丰富,上手容易,还同时集中分布式、微服务,同时包含许多基础模块和监控、服务模块。
 
-当前最新版本： 2.5（发布日期：20181011）
+当前最新版本： 5.3（发布日期：20190627）
 
 
 一、平台简介
@@ -14,7 +14,7 @@ RocketSpringCloud<br>
 作者QQ：286899139
 <br>
  QQ交流群：599949996<br>
-RocketSpringCloud V2.5-互联网云快速开发框架模块包含定时任务调度、服务器监控、平台监控、异常邮件监控、服务器Down机邮件监控、平台设置、开发平台、邮件监控、图表监控、地图监控、单点登录、Redis分布式高速缓存、<br>
+RocketSpringCloud V5.3-互联网云快速开发框架模块包含定时任务调度、服务器监控、平台监控、异常邮件监控、服务器Down机邮件监控、平台设置、开发平台、邮件监控、图表监控、地图监控、单点登录、Redis分布式高速缓存、<br>
 ActiveMQ队列、会员、营销、在线用户、日志、在线人数、访问次数、调用次数、直接集群、接口文档、生成模块、代码实例、安装视频、教程文档、dubbo（待开发）、springCloud、SpringBoot、mybatis、springmvc、IOC、AOP、定时任务、切面缓存、MVC、事务管理。<br>
 RedisMQ队列（待开发）、代码生成(单表、主附表、树表、列表和表单、增删改查云接口、redis高速缓存对接代码、图表统计、地图统计、vue.js)、工作流（待开发）<br>
 
@@ -83,7 +83,7 @@ RedisMQ队列（待开发）、代码生成(单表、主附表、树表、列表
 
 三、系统截图
 -----------------------------------
-### RocketSpringCloud V2.5-互联网云快速开发框架（后台）
+### RocketSpringCloud V5.3-互联网云快速开发框架（后台）
 
 <img alt="微服务" class="md_relative_url" src="./document/RepositoryService.jpg">
 <img alt="微服务" class="md_relative_url" src="./document/login1.png">
@@ -158,7 +158,7 @@ RepositoryService仓库,提供Service接口和多种实现,可进行配置实现
 
 八、技术交流
 -----------------------------------
-QQ群：599949996<br>
+QQ群：599949996<br> 591345650<br>
 
 
 九、版权声明
