@@ -11,7 +11,7 @@ import com.jeespring.modules.sys.entity.User;
 
 /**
  * 日历Entity
- * @author liugf
+ * @author gaowh
  * @version 2016-04-19
  */
 public class MyCalendar extends AbstractBaseEntity<MyCalendar> {

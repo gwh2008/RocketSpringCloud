@@ -13,7 +13,7 @@ import com.jeespring.modules.test.dao.tree.TestTreeDao;
 
 /**
  * 组织机构Service
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-03
  */
 @Service

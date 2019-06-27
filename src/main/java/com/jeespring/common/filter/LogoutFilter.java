@@ -24,7 +24,7 @@ import javax.servlet.ServletResponse;
 /**
  * 退出过滤器
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 
 public class LogoutFilter extends org.apache.shiro.web.filter.authc.LogoutFilter

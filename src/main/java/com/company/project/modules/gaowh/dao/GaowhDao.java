@@ -8,7 +8,7 @@ import com.company.project.modules.gaowh.entity.Gaowh;
 /**
  * 模块管理（上传和下载）DAO接口
  * @author gaowenhui
- * @version 2018-09-27
+ * @version 2018-11-21
  */
 @Mapper
 public interface GaowhDao extends InterfaceBaseDao<Gaowh> {

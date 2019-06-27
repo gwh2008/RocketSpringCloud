@@ -25,7 +25,7 @@ import  com.jeespring.modules.monitor.entity.OnlineSession;
 /**
  * 自定义访问控制
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public class OnlineSessionFilter //extends AccessControlFilter
 {

@@ -7,7 +7,7 @@ import com.jeespring.modules.job.entity.SysJob;
 
 /**
  * 定时任务调度DAO接口
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 @Mapper

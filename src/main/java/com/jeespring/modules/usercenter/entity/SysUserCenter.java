@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  * 用户中心Entity
- * @author 黄炳桂
+ * @author gaowh
  * @version 2017-12-12
  */
 public class SysUserCenter extends AbstractBaseEntity<SysUserCenter> {

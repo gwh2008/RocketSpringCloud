@@ -10,7 +10,7 @@ import com.jeespring.common.persistence.TreeEntity;
 
 /**
  * 数据字典Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-22
  */
 public class SysDictTree extends TreeEntity<SysDictTree> {

@@ -13,7 +13,7 @@ import org.apache.commons.beanutils.PropertyUtilsBean;
 /**
  * <p>Title: </p>
  * <p>Description: </p>
- * @author  刘高峰
+ * @author  gaowh
  * @version 2.0
  */
 

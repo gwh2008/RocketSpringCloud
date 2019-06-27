@@ -9,7 +9,7 @@ import com.jeespring.common.persistence.TreeEntity;
 
 /**
  * 组织机构Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-03
  */
 public class TestTree extends TreeEntity<TestTree> {

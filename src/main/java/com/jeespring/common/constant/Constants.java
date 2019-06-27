@@ -3,7 +3,7 @@ package com.jeespring.common.constant;
 /**
  * 通用常量信息
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public class Constants
 {

@@ -1,10 +1,6 @@
 /** * * Copyright &copy; 2015-2020 <a href="https://github.com/gaowenhui/RocketSpringCloud">JeeSpring</a> All rights reserved.. */
 package com.company.project.modules.gaowh.web;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +9,6 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jeespring.common.utils.*;
 import org.apache.shiro.authz.annotation.Logical;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +22,11 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.google.common.collect.Lists;
+import com.jeespring.common.utils.DateUtils;
 import com.jeespring.common.config.Global;
 import com.jeespring.common.persistence.Page;
 import com.jeespring.common.web.AbstractBaseController;
+import com.jeespring.common.utils.StringUtils;
 import com.jeespring.common.utils.excel.ExportExcel;
 import com.jeespring.common.utils.excel.ImportExcel;
 import com.company.project.modules.gaowh.entity.Gaowh;
@@ -37,7 +34,7 @@ import com.company.project.modules.gaowh.service.GaowhService;
 /**
  * 模块管理（上传和下载）Controller
  * @author gaowenhui
- * @version 2018-09-27
+ * @version 2018-11-21
  */
 @Controller
 @RequestMapping(value = "${adminPath}/gaowh/gaowh")
@@ -226,151 +223,6 @@ public class GaowhController extends AbstractBaseController {
 			gaowhService.deleteByLogic(gaowhService.get(id));
 		}
 		addMessage(redirectAttributes, "删除模块管理成功");
-		return "redirect:"+Global.getAdminPath()+"/gaowh/gaowh/?repage";
-	}
-
-	/**
-	 * 上传模块
-	 */
-//	@RequiresPermissions("gaowh:gaowh:upload")
-	@RequestMapping(value = "upload", method=RequestMethod.POST)
-	public String upload(Gaowh gaowh, HttpServletRequest request, HttpServletResponse response, RedirectAttributes redirectAttributes) {
-		try {
-			//压缩文件
-			String moduleName = gaowh.getModuleName();
-			moduleName = ( moduleName != "" ||  moduleName != null) ? moduleName : "ask";
-			//获得工程根目录
-			String projectPath = Global.getProjectPath();
-			if (StringUtils.isNotBlank(projectPath)){
-			//建立四个目录，分别存放要压缩的文件
-			String serverFilePath = projectPath+File.separator +moduleName+File.separator +"serverFile";
-			File file1 = new File(serverFilePath);
-			if(!file1.exists()){
-				file1.mkdirs();
-			}
-			String maperXmlPath = projectPath+File.separator +moduleName+File.separator +"maperXml";
-			File file2 = new File(maperXmlPath);
-			if(!file2.exists()){
-				file2.mkdirs();
-			}
-			String jspPath = projectPath+File.separator +moduleName+File.separator +"jsp";
-			File file3 = new File(jspPath);
-			if(!file3.exists()){
-				file3.mkdirs();
-			}
-			String staticFilePath = projectPath+"\\"+moduleName+"\\"+"staticFile";
-			File file4 = new File(staticFilePath);
-			if(!file4.exists()){
-				file4.mkdirs();
-			}
-			// 根据前端选择的模块功能的关键字，去工程里把相关代码做压缩处理
-				String serverFile = projectPath+"\\src\\main\\java\\com\\company\\project\\modules\\"+moduleName;
-				String maperXml = projectPath+"\\src\\main\\resources\\mappings\\modules\\"+moduleName;
-				String jsp = projectPath+"\\src\\main\\webapp\\WEB-INF\\views\\modules\\"+moduleName;
-				String staticFile = projectPath+"\\src\\main\\webapp\\static\\views\\modules\\"+moduleName;
-				ZipCompressor zc_serverFile = new ZipCompressor(serverFilePath+   ".zip");
-				zc_serverFile.compress(serverFile);
-				ZipCompressor zc_maperXml = new ZipCompressor(maperXmlPath +  ".zip");
-				zc_maperXml.compress(maperXml);
-				ZipCompressor zc_jsp = new ZipCompressor(jspPath +  ".zip");
-				zc_jsp.compress(jsp);
-				ZipCompressor zc_staticFile = new ZipCompressor(staticFilePath+  ".zip");
-				zc_staticFile.compress(staticFile);
-			   //所有相关目录(4个大目录)下的文件都统一打包成关键字.zip
-				ZipCompressorByAnt
-						.zip(
-								new File(
-										projectPath+File.separator +moduleName),
-								new File(
-										projectPath+File.separator +moduleName+".zip"));
-			//上传到ftp
-			File f = new File(projectPath+  File.separator+moduleName+ ".zip");
-			String fileName = f.getName();
-			System.out.println(fileName);
-			InputStream in = null;
-			try {
-				in = new FileInputStream(f);
-				boolean flag = FtpUtil.uploadFile("10.1.6.126", 21, "update_pro", "aNyOp4Yk", "/www", "/123", fileName, in);
-				System.out.println(flag);
-				//刪除本地文件
-				f.delete();
-				File file = new File(projectPath+  File.separator+moduleName);
-				this.deleteFile(file);
-				addMessage(redirectAttributes, flag == true ? "success":"fail");
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-			}
-			//return null;
-		} catch (Exception e) {
-			addMessage(redirectAttributes, "上传模块失败！失败信息："+e.getMessage());
-		}
-		return "redirect:"+Global.getAdminPath()+"/gaowh/gaowh/?repage";
-	}
-	/**
-	 * 先根遍历序递归删除文件夹
-	 * @param dirFile 要被删除的文件或者目录
-	 * @return 删除成功返回true, 否则返回false
-	 */
-	public static boolean deleteFile(File dirFile) {
-		// 如果dir对应的文件不存在，则退出
-		if (!dirFile.exists()) {
-			return false;
-		}
-		if (dirFile.isFile()) {
-			return dirFile.delete();
-		} else {
-
-			for (File file : dirFile.listFiles()) {
-				deleteFile(file);
-			}
-		}
-		return dirFile.delete();
-	}
-
-
-	/**
-	 * 下载模块
-	 */
-   //@RequiresPermissions("gaowh:gaowh:download")
-	@RequestMapping(value = "download", method=RequestMethod.POST)
-	public String download(Gaowh gaowh, HttpServletRequest request, HttpServletResponse response, RedirectAttributes redirectAttributes) {
-		try {
-			// 如果配置了工程路径，则直接返回，否则自动获取。
-			String projectPath = Global.getProjectPath();
-			String moduleName = gaowh.getModuleName();
-			moduleName = ( moduleName != "" ||  moduleName != null) ? moduleName : "ask";
-			String serverFile = projectPath+"\\src\\main\\java\\com\\company\\project\\modules\\";
-			String maperXml = projectPath+"\\src\\main\\resources\\mappings\\modules\\";
-			String jsp = projectPath+"\\src\\main\\webapp\\WEB-INF\\views\\modules\\";
-			String staticFile = projectPath+"\\src\\main\\webapp\\static\\views\\modules\\";
-			//从ftp下载压缩包到本地
-			boolean flag_xiazai = FtpUtil.downloadFile("10.1.6.126", 21, "update_pro", "aNyOp4Yk", "/www/123", moduleName+".zip", projectPath);
-			//解压到本地工程
-			ZipCompressorByAnt.unzip(new File(
-								projectPath+  File.separator + moduleName +".zip"),new File(
-								projectPath+  File.separator + moduleName));
-			ZipCompressorByAnt.unzip(new File(
-					projectPath+  File.separator + moduleName +  File.separator +"serverFile.zip"),new File(
-					serverFile ));
-			ZipCompressorByAnt.unzip(new File(
-					projectPath+  File.separator + moduleName +  File.separator +"maperXml.zip"),new File(
-					maperXml ));
-			ZipCompressorByAnt.unzip(new File(
-					projectPath+  File.separator + moduleName +  File.separator +"jsp.zip"),new File(
-					jsp ));
-			ZipCompressorByAnt.unzip(new File(
-					projectPath+  File.separator + moduleName +  File.separator +"staticFile.zip"),new File(
-					staticFile ));
-			//刪除本地文件
-			File f = new File(projectPath+  File.separator+moduleName+ ".zip");
-			f.delete();
-			File file = new File(projectPath+  File.separator+moduleName);
-			this.deleteFile(file);
-			addMessage(redirectAttributes, flag_xiazai == true ? "success":"fail");
-		} catch (Exception e) {
-			addMessage(redirectAttributes, "导出模块管理记录失败！失败信息："+e.getMessage());
-		}
 		return "redirect:"+Global.getAdminPath()+"/gaowh/gaowh/?repage";
 	}
 

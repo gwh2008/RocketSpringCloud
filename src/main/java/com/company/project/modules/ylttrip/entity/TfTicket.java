@@ -14,7 +14,7 @@ import com.jeespring.modules.sys.utils.DictUtils;
 
 /**
  * 订单Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 public class TfTicket extends AbstractBaseEntity<TfTicket> {

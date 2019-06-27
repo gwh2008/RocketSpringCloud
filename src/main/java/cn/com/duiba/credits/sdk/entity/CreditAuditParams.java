@@ -9,7 +9,7 @@ import java.util.List;
  * 
  * 如果开发者要告知兑吧审核结果，可以向兑吧发起请求，构建这个 CreditAuditParams对象，将此对象发送给兑吧即可
  * 
- * @author xuhengfei
+ *
  *
  */
 public class CreditAuditParams {

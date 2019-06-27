@@ -38,7 +38,7 @@ import com.jeespring.modules.echarts.service.ChinaWeatherDataBeanService;
 
 /**
  * 城市气温Controller
- * @author JeeSpring
+ * @author gaowh
  * @version 2016-05-26
  */
 @Controller

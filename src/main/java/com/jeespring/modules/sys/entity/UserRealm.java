@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * 自定义Realm 处理登录 权限
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public class UserRealm extends AuthorizingRealm
 {

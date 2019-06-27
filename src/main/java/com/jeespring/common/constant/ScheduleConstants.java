@@ -3,7 +3,7 @@ package com.jeespring.common.constant;
 /**
  * 任务调度通用常量
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public interface ScheduleConstants
 {

@@ -11,7 +11,7 @@ import com.jeespring.common.utils.excel.annotation.ExcelField;
 
 /**
  * 城市气温Entity
- * @author lgf
+ * @author gaowh
  * @version 2016-06-02
  */
 public class ChinaWeatherDataBean extends AbstractBaseEntity<ChinaWeatherDataBean> {

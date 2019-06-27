@@ -34,7 +34,7 @@ import com.jeespring.modules.job.entity.SysJobLog;
 import com.jeespring.modules.job.service.SysJobLogService;
 /**
  * 定时任务调度日志表Controller
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 @Controller

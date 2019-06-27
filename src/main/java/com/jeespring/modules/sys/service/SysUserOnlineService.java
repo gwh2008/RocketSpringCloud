@@ -23,7 +23,7 @@ import com.jeespring.common.security.MD5Tools;
 
 /**
  * 在线用户记录Service
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 @Service

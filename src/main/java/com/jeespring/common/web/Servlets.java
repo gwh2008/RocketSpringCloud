@@ -31,8 +31,8 @@ import com.jeespring.modules.sys.utils.UserUtils;
 /**
  * Http与Servlet工具类.
  *
- * @author calvin/HuangBingGui
- * @version 2014-8-19
+ * @author gaowh
+ * @version 2018-8-19
  */
 public class Servlets {
 

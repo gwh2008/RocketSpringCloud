@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 日历DAO接口
- * @author JeeSpring
+ * @author gaowh
  * @version 2016-04-19
  */
 @Mapper

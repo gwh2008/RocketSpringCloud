@@ -12,7 +12,7 @@ import com.jeespring.modules.sys.utils.DictUtils;
 /**
  * 模块管理（上传和下载）Entity
  * @author gaowenhui
- * @version 2018-09-27
+ * @version 2018-11-21
  */
 public class Gaowh extends AbstractBaseEntity<Gaowh> {
 	

@@ -31,7 +31,7 @@ import com.jeespring.modules.job.entity.SysJob;
 import com.jeespring.modules.job.service.SysJobService;
 /**
  * 定时任务调度Controller
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 @Controller

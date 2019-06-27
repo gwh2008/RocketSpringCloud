@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 /**
  * 执行定时任务
  * 
- * @author JeeSpring
+ * @author gaowh
  *
  */
 public class ScheduleRunnable implements Runnable

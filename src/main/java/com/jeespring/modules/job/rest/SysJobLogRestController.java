@@ -39,7 +39,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * 定时任务调度日志表Controller
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 @RestController

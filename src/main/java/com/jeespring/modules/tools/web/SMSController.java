@@ -20,7 +20,7 @@ import com.jeespring.modules.sys.service.SystemConfigService;
 
 /**
  * 发送短信
- * @author JeeSpring
+ * @author gaowh
  * @version 2016-01-07
  */
 @Controller

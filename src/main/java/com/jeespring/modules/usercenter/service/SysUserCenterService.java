@@ -16,7 +16,7 @@ import com.jeespring.common.redis.RedisUtils;
 
 /**
  * 用户中心Service
- * @author 黄炳桂
+ * @author gaowh
  * @version 2017-12-12
  */
 @Service

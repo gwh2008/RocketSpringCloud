@@ -10,7 +10,7 @@ import com.jeespring.common.utils.excel.annotation.ExcelField;
 
 /**
  * 系统配置Entity
- * @author liugf
+ * @author gaowh
  * @version 2016-02-07
  */
 public class SystemConfig extends AbstractBaseEntity<SystemConfig> {

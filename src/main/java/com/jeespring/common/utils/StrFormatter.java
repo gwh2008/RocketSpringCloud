@@ -3,7 +3,7 @@ package com.jeespring.common.utils;
 /**
  * 字符串格式化
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public class StrFormatter
 {

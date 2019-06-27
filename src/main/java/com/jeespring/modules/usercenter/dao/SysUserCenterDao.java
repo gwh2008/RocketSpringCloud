@@ -7,7 +7,7 @@ import com.jeespring.modules.usercenter.entity.SysUserCenter;
 
 /**
  * 用户中心DAO接口
- * @author 黄炳桂
+ * @author gaowh
  * @version 2017-12-12
  */
 @Mapper

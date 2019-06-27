@@ -39,7 +39,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * 在线用户记录Controller
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 @RestController

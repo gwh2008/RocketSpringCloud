@@ -3,7 +3,7 @@ package com.jeespring.common.exception.job;
 /**
  * 计划策略异常
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public class TaskException extends Exception
 {

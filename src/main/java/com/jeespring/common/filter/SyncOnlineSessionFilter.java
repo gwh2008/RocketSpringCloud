@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * 同步Session数据到Db
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public class SyncOnlineSessionFilter extends PathMatchingFilter
 {

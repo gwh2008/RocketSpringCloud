@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 /**
  * 获取地址类
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public class AddressUtils
 {

@@ -10,7 +10,7 @@ import com.jeespring.common.utils.excel.annotation.ExcelField;
 
 /**
  * 班级Entity
- * @author lgf
+ * @author gaowh
  * @version 2016-05-26
  */
 public class PieClass extends AbstractBaseEntity<PieClass> {

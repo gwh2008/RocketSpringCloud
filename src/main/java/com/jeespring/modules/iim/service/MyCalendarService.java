@@ -16,7 +16,7 @@ import com.jeespring.modules.iim.entity.MyCalendar;
 
 /**
  * 日历Service
- * @author liugf
+ * @author gaowh
  * @version 2016-04-19
  */
 @Service

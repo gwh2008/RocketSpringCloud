@@ -15,7 +15,7 @@ import com.jeespring.modules.monitor.dao.MonitorDao;
 
 /**
  * 系统监控Service
- * @author liugf
+ * @author gaowh
  * @version 2016-02-07
  */
 @Service

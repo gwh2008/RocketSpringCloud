@@ -15,7 +15,7 @@ import com.jeespring.modules.echarts.dao.PieClassDao;
 
 /**
  * 班级Service
- * @author JeeSpring
+ * @author gaowh
  * @version 2016-05-26
  */
 @Service

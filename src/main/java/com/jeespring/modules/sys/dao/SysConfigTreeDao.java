@@ -8,7 +8,7 @@ import com.jeespring.modules.sys.entity.SysConfigTree;
 
 /**
  * 系统配置DAO接口
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-22
  */
 @Mapper
