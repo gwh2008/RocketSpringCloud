@@ -13,7 +13,7 @@ import com.jeespring.common.service.AbstractService;
 
 /**
  * 手机端视图拦截器
- * @author jeespring
+ * @author gaowh
  * @version 2014-9-1
  */
 public class MobileInterceptor extends AbstractService implements HandlerInterceptor {

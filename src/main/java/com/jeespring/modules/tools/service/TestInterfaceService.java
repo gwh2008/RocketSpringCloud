@@ -13,7 +13,7 @@ import com.jeespring.modules.tools.entity.TestInterface;
 
 /**
  * 接口Service
- * @author lgf
+ * @author gaowh
  * @version 2016-01-07
  */
 @Service

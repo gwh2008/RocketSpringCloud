@@ -40,7 +40,7 @@ import com.jeespring.modules.tools.service.TestInterfaceService;
 import com.jeespring.modules.tools.utils.HttpPostTest;
 /**
  * 接口Controller
- * @author JeeSpring
+ * @author gaowh
  * @version 2016-01-07
  */
 @Controller

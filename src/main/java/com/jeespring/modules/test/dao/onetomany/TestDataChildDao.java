@@ -7,7 +7,7 @@ import com.jeespring.modules.test.entity.onetomany.TestDataChild;
 
 /**
  * 订票DAO接口
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-06
  */
 @Mapper

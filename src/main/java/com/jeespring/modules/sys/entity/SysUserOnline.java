@@ -15,7 +15,7 @@ import com.jeespring.modules.sys.utils.DictUtils;
 
 /**
  * 在线用户记录Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 public class SysUserOnline extends AbstractBaseEntity<SysUserOnline> {

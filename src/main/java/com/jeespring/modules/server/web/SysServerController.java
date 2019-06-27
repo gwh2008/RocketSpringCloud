@@ -36,7 +36,7 @@ import com.jeespring.modules.server.service.SysServerService;
 import com.alibaba.dubbo.config.annotation.Reference;
 /**
  * 服务器监控Controller
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-20
  */
 @Controller

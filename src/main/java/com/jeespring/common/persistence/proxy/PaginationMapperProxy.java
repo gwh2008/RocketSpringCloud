@@ -21,7 +21,7 @@ import java.util.Set;
  * .
  * </p>
  *
- * @author poplar.yfyang
+ * @author gaowh
  * @version 1.0 2012-05-13 上午10:07
  * @since JDK 1.5
  */

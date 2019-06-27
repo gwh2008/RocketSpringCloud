@@ -7,7 +7,7 @@ import com.jeespring.modules.mvvmoa.entity.FormLeavem;
 
 /**
  * 员工请假DAO接口
- * @author liugf
+ * @author gaowh
  * @version 2017-07-17
  */
 @Mapper

@@ -419,7 +419,7 @@ public class Common {
 	 * @descript
 	 * @param t
 	 * @param params
-	 * @author JeeSpring
+	 * @author gaowh
 	 * @date 2015年3月29日
 	 * @version 1.0
 	 */
@@ -454,7 +454,7 @@ public class Common {
 	 * @descript
 	 * @param content
 	 * @return
-	 * @author JeeSpring
+	 * @author gaowh
 	 * @date 2015年4月27日
 	 * @version 1.0
 	 */
@@ -479,7 +479,7 @@ public class Common {
 	 * @descript
 	 * @param content
 	 * @return
-	 * @author JeeSpring
+	 * @author gaowh
 	 * @date 2015年4月27日
 	 * @version 1.0
 	 */

@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 自定义sessionFactory会话
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 @Service
 public class OnlineSessionFactory implements SessionFactory

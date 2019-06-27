@@ -14,7 +14,7 @@ import com.jeespring.common.utils.bean.BeanUtils;
 /**
  * shiro 工具类
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public class ShiroUtils
 {

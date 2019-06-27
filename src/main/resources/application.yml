@@ -95,7 +95,7 @@ spring:
       config: classpath:ehcache.xml
 #spring-redis的配置
   redis:
-    hostName: 10.1.11.177
+    hostName: 127.0.0.1
     port: 6379
     password: 
     pool:
@@ -110,7 +110,7 @@ spring:
     expireTime: 900     #缓存有效时间15分钟
     expireTimeShiro: 1800     #缓存有效时间30分钟
   activemq:
-    broker-url: tcp://10.1.11.177:61616
+    broker-url: tcp://127.0.0.1:61616
     in-memory: true # Specify if the default broker URL should be in memory. Ignored if an explicit broker has been specified.
     password: admin  # Login password of the broker.
     user: admin  # Login user of the broker.
@@ -183,7 +183,7 @@ dubbo:
   application:
     name: consumer
   registry:
-    address: zookeeper://10.1.11.177:2181
+    address: zookeeper://127.0.0.1:2181
   scan:
     base-packages: com.jeespring.modules.server.web
   run: true

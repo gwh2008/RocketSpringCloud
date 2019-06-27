@@ -28,7 +28,7 @@ import com.jeespring.modules.usercenter.entity.SysUserCenter;
 import com.jeespring.modules.usercenter.service.SysUserCenterService;
 /**
  * 用户中心Controller
- * @author 黄炳桂
+ * @author gaowh
  * @version 2017-12-12
  */
 @Controller

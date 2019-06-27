@@ -20,7 +20,7 @@ import java.util.List;
 /**
  * 定时任务调度测试
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 @Component("jeeSpringTask")
 public class JeeSpringTask

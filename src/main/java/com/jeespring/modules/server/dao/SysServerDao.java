@@ -7,7 +7,7 @@ import com.jeespring.modules.server.entity.SysServer;
 
 /**
  * 服务器监控DAO接口
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-20
  */
 @Mapper

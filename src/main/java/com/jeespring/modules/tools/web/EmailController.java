@@ -18,7 +18,7 @@ import com.jeespring.modules.sys.service.SystemConfigService;
 
 /**
  * 发送外部邮件
- * @author lgf
+ * @author gaowh
  * @version 2016-01-07
  */
 @Controller

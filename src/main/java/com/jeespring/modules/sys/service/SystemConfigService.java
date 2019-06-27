@@ -15,7 +15,7 @@ import com.jeespring.modules.sys.dao.SystemConfigDao;
 
 /**
  * 系统配置Service
- * @author liugf
+ * @author gaowh
  * @version 2016-02-07
  */
 @Service

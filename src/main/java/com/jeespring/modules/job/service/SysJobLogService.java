@@ -17,7 +17,7 @@ import com.jeespring.common.security.MD5Tools;
 
 /**
  * 定时任务调度日志表Service
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 @Service

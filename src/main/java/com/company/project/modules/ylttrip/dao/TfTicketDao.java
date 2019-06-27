@@ -7,7 +7,7 @@ import com.company.project.modules.ylttrip.entity.TfTicket;
 
 /**
  * 订单DAO接口
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 @Mapper

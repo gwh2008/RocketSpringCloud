@@ -37,7 +37,7 @@ import com.jeespring.modules.echarts.service.PieClassService;
 
 /**
  * 班级Controller
- * @author lgf
+ * @author gaowh
  * @version 2016-05-26
  */
 @Controller

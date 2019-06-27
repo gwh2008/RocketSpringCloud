@@ -16,7 +16,7 @@ import com.jeespring.modules.sys.utils.DictUtils;
 
 /**
  * 员工请假Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-03
  */
 public class FormLeave extends AbstractBaseEntity<FormLeave> {

@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 定时任务工具类
  * 
- * @author JeeSpring
+ * @author gaowh
  *
  */
 public class ScheduleUtils

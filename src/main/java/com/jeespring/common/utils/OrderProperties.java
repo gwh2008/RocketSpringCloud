@@ -18,7 +18,7 @@ import com.google.common.collect.Lists;
  * 有序的properties的工具类，由于JDK自身的写会乱序，所以采用这个工具类来保证读写次序正常.
  * </p>
  *
- * @author poplar.yfyang
+ * @author gaowh
  * @version 1.0 2013-01-02 12:57 PM
  * @since JDK 1.5
  */

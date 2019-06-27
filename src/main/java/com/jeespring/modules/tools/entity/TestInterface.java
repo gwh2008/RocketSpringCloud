@@ -8,7 +8,7 @@ import com.jeespring.common.persistence.AbstractBaseEntity;
 
 /**
  * 接口Entity
- * @author lgf
+ * @author gaowh
  * @version 2016-01-07
  */
 public class TestInterface extends AbstractBaseEntity<TestInterface> {

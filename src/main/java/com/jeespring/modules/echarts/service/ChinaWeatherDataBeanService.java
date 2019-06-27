@@ -15,7 +15,7 @@ import com.jeespring.modules.echarts.dao.ChinaWeatherDataBeanDao;
 
 /**
  * 城市气温Service
- * @author lgf
+ * @author gaowh
  * @version 2016-06-02
  */
 @Service

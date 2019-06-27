@@ -7,7 +7,7 @@ import com.jeespring.modules.tools.entity.TestInterface;
 
 /**
  * 接口DAO接口
- * @author lgf
+ * @author gaowh
  * @version 2016-01-07
  */
 @Mapper

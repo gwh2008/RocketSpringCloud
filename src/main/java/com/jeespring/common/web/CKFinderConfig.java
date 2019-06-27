@@ -32,7 +32,7 @@ import com.jeespring.modules.sys.utils.UserUtils;
  * CKFinder配置
  *
  * @author gaowh
- * @version 2014-06-25
+ * @version 2018-06-25
  */
 public class CKFinderConfig extends Configuration {
 

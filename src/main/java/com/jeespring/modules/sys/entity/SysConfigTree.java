@@ -10,7 +10,7 @@ import com.jeespring.common.persistence.TreeEntity;
 
 /**
  * 系统配置Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-22
  */
 public class SysConfigTree extends TreeEntity<SysConfigTree> {

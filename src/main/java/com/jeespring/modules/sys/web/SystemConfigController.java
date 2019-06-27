@@ -35,7 +35,7 @@ import com.jeespring.modules.sys.service.SystemConfigService;
 
 /**
  * 系统配置Controller
- * @author liugf
+ * @author gaowh
  * @version 2016-02-07
  */
 @Controller

@@ -29,7 +29,7 @@ import com.jeespring.modules.sys.service.SysDictTreeService;
 
 /**
  * 数据字典Controller
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-22
  */
 @Controller

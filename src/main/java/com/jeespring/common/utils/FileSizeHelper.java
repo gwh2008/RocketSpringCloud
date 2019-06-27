@@ -7,7 +7,7 @@ import java.text.DecimalFormat;
  * 文件大小工具类.
  * </p>
  *
- * @author poplar.yfyang
+ * @author gaowh
  * @version 1.0 2013-01-02 12:50 PM
  * @since JDK 1.5
  */

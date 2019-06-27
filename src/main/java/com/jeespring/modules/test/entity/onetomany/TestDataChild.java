@@ -13,7 +13,7 @@ import com.jeespring.modules.sys.utils.DictUtils;
 
 /**
  * 订票Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-06
  */
 public class TestDataChild extends AbstractBaseEntity<TestDataChild> {

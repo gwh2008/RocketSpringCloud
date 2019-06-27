@@ -12,7 +12,7 @@ import com.jeespring.modules.sys.utils.DictUtils;
 
 /**
  * 定时任务调度Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 public class SysJob extends AbstractBaseEntity<SysJob> {

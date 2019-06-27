@@ -33,7 +33,7 @@ import com.jeespring.modules.sys.entity.SysUserOnline;
 import com.jeespring.modules.sys.service.SysUserOnlineService;
 /**
  * 在线用户记录Controller
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-16
  */
 @Controller

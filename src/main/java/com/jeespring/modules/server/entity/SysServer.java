@@ -11,7 +11,7 @@ import com.jeespring.modules.sys.utils.DictUtils;
 
 /**
  * 服务器监控Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2018-08-20
  */
 public class SysServer extends AbstractBaseEntity<SysServer> {

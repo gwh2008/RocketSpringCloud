@@ -3,7 +3,7 @@ package com.jeespring.common.constant;
 /**
  * Shiro通用常量
  * 
- * @author JeeSpring
+ * @author gaowh
  */
 public interface ShiroConstants
 {

@@ -29,7 +29,7 @@ import java.util.Map;
 
 /**
  * 人脸识别Controller
- * @author 唐继涛
+ * @author gaowh
  * @version 2018-7-13
  */
 @RestController

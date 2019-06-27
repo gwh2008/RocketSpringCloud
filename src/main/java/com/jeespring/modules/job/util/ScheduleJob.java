@@ -21,7 +21,7 @@ import java.util.concurrent.Future;
 /**
  * 定时任务
  * 
- * @author JeeSpring
+ * @author gaowh
  *
  */
 public class ScheduleJob extends QuartzJobBean

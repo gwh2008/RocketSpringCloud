@@ -13,7 +13,7 @@ import com.jeespring.common.utils.excel.annotation.ExcelField;
 
 /**
  * 员工请假Entity
- * @author JeeSpring
+ * @author gaowh
  * @version 2017-07-17
  */
 public class FormLeavem extends AbstractBaseEntity<FormLeavem> {
