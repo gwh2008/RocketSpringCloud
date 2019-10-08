@@ -13,7 +13,7 @@ RocketSpringCloud<br>
 帮忙star、fork<br>
 作者QQ：286899139
 <br>
- QQ交流群：599949996<br>
+ QQ交流群：591354325<br>
 RocketSpringCloud V5.3-互联网云快速开发框架模块包含定时任务调度、服务器监控、平台监控、异常邮件监控、服务器Down机邮件监控、平台设置、开发平台、邮件监控、图表监控、地图监控、单点登录、Redis分布式高速缓存、<br>
 ActiveMQ队列、会员、营销、在线用户、日志、在线人数、访问次数、调用次数、直接集群、接口文档、生成模块、代码实例、安装视频、教程文档、dubbo（待开发）、springCloud、SpringBoot、mybatis、springmvc、IOC、AOP、定时任务、切面缓存、MVC、事务管理。<br>
 RedisMQ队列（待开发）、代码生成(单表、主附表、树表、列表和表单、增删改查云接口、redis高速缓存对接代码、图表统计、地图统计、vue.js)、工作流（待开发）<br>
