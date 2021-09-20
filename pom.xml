@@ -14,7 +14,7 @@
 		<version>1.5.2.RELEASE</version>
 	</parent>
 	<properties>
-		<shiro.version>1.4.0-RC2</shiro.version>
+		<shiro.version>1.8.0</shiro.version>
 		<poi.version>3.9</poi.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
